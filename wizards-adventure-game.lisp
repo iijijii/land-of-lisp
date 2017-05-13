@@ -35,3 +35,5 @@
 	(labels ((describe-obj (obj)
 												 `(you see a ,obj on the floor.)))
 		(apply #'append (mapcar #'describe-obj (objects-at loc objs obj-loc)))))
+
+(defparameter *location* 'living-room)
