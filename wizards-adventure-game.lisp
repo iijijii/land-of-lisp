@@ -20,3 +20,8 @@
 	(apply #'append (mapcar #'describe-path (cdr (assoc location edges)))))
 
 (defparameter *objects* '(whiskey bucket frog chain))
+
+(defparameter *object-locations* '((whiskey living-room)
+																	 (bucket living-room)
+																	 (chain garden)
+																	 (frog garden)))
