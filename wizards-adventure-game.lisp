@@ -153,3 +153,11 @@
 	(nodes->dot nodes)
 	(edges->dot edges)
 	(princ "}"))
+
+(defun dot->png (fname thunk)
+	(with-open-file (*standard-output*
+										fname
+										:direction :output
+										:if-exists :supersede)
+		(funcall thunk))
+	(ext:shell (concatenate 'string "dot -Tpng -O " fname)))
