@@ -102,6 +102,12 @@
 								 'string))
 	(fresh-line))
 
+(defparameter *wizard-nodes* '((living-room (you are in the living-room.
+																								 a wizard is snoring loudly on the couch.))
+															 (garden (you are in a beautiful garden. there is a well in front of you.))
+															 (attic (you are in the attic. there
+																					 is a giant welding torch in the corner.))))
+
 (defun dot-name (exp)
 	(substitute-if #\_ (complement #'alphanumericp) (prin1-to-string exp)))
 
