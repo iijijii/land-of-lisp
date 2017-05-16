@@ -186,3 +186,8 @@
 	(nodes->dot nodes)
 	(uedges->dot edges)
 	(princ "}"))
+
+(defun ugraph->png (fname nodes edges)
+	(dot->png fname
+						(lambda ()
+							(ugraph->dot nodes edges))))
