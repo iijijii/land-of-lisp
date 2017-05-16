@@ -180,3 +180,9 @@
 											 (princ "\"];")))
 									 (cdar lst)))
 					 edges))
+
+(defun ugraph->dot (nodes edges)
+	(princ "graph{")
+	(nodes->dot nodes)
+	(uedges->dot edges)
+	(princ "}"))
